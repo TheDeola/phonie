@@ -53,8 +53,6 @@ const checkInput = () =>{
     
     if (phoneValue === '')  {
         setError (phone, 'phone cannot be empty')
-    } else if (!isPhone(phoneValue)) {
-        setError (phone, 'Looks like this is not a +234 number')
     } else {
         setSuccess(phone);
     }
@@ -97,8 +95,8 @@ function isPhone(phone) {
     return mtn, glo, airtel, etisalat.test(phone);
 }
 
-let signinBtn = document.getElementById(".signinBtn");
-let signupBtn = document.getElementById(".signupBtn");
+let signinBtn = document.getElementById("signinBtn");
+let signupBtn = document.getElementById("signupBtn");
 
 let signinForm = document.querySelector(".container2");
 let signupForm = document.querySelector(".container");
