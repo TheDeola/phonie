@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phonie</title>
+    
     <!-- stylesheet -->
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Phonie</title>
 </head>
 <body>
     <main class="container">
@@ -17,46 +20,65 @@
         <div class="card-2">
             <div class="nav">
                 <span>Already a member?</span>
-                <button type="btn" name="btn" id="signinBtn">Sign In</button>
+                <button type="btn" name="submit" id="signinBtn">Sign In</button>
             </div>
             <div>
                 <h3>Connect to view dashboard</h3>
                 <form action="#" class="form" id="form">
-                    <div class="form-control">
+                    <div class="form-control error success">
                         <label for="name">Name</label>
-                        <input type="text" name="name" value="" placeholder="Enter Name" id="name" required>
+                        <input type="text" name="name" value="" placeholder="Enter Name" id="name">
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
                         <small>Name cannot be empty</small>
                     </div>
 
-                    <div class="form-control">
+                    <div class="form-control error success">
                         <label for="username">Username</label>
-                        <input type="text" name="username" value="" placeholder="Enter Username" id="username" required>
+                        <input type="text" name="username" value="" placeholder="Enter Username" id="username">
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
                         <small>Username cannot be empty</small>
                     </div>
 
-                    <div class="form-control">
+                    <div class="form-control error success">
                         <label for="email">Email</label>
-                        <input type="email" name="email" value="" placeholder="username@domain.com" id="email" required>
+                        <input type="email" name="email" value="" placeholder="username@domain.com" id="email">
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
                         <small>Looks like this is not an email</small>
                     </div>
 
-                    <div class="form-control">
+                    <div class="form-control phone error success">
                         <label for="phone">Phone</label>
-                        <input type="number" name="phone" value="" placeholder="+234 xxx xxxx xxx" id="phone" required>
+                        <div>
+                            <select name="countries">
+                                <option value="NG">🇳🇬&emsp;+234</option>
+                                <option value="UK">🇬🇧&emsp;+44</option>
+                                <option value="SA">🇿🇦&emsp;+27</option>
+                                <option value="GH">🇧🇴&emsp;+233</option>
+                                <option value="NL">🇳🇱&emsp;+31</option>
+                                <option value="DE">🇩🇰&emsp;+45</option>
+                                <option value="GE">🇩🇪&emsp;+49</option>
+                                <option value="FR">🇫🇷&emsp;+33</option>
+                                <option value="ES">🇪🇸&emsp;+34</option>
+                            </select>
+                            <input type="text" name="phone" value="" placeholder="080x xxxx xxx" id="phone">
+                            <div class="phone-flex">
+                                <div class="first small-circle"></div>
+                                <div class="thin-line"></div>
+                                <div class="small-circle"></div>
+                                <div class="big-circle network-image"></div>
+                            </div>
+                        </div>
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
                         <small>Please input correct phone number</small>
                     </div>
 
-                    <div class="form-control">
+                    <div class="form-control error success">
                         <label for="password">Password</label>
-                        <input type="password" name="password" value="" placeholder="8+ characters" id="password" required>
+                        <input type="password" name="password" value="" placeholder="8+ characters" id="password">
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
                         <small>Password cannot be empty</small>
@@ -67,7 +89,7 @@
                         <p class="form-para">Creating an account means you're okay with our <span class="form-span"><a href="#">Terms of Service, Privacy Policy, </a>and our default <span class="form-span"><a href="#">Notification Settings</a>.</p>
                     </div>
 
-                    <button type="submit" name="submit" id="submit">Create Account</button>
+                    <button type="submit" name="button" id="submit">Create Account</button>
                     <p class="form-para">This site is protected by reCAPTCHA and the Google <span class="form-span"><a href="#">Privacy Policy</a></span> and <span class="form-span"><a href="#">Terms of Service </a></span> apply</p>
                 </form>
                 <p class="footer-info">Challenge by <a href="">Circle-171</a> Rockstars</p>
@@ -85,7 +107,7 @@
         <div class="card-2">
             <div class="nav">
                 <span>Not a member?</span>
-                <button type="btn" name="btn" id="signupBtn">Sign Up</button>
+                <button type="btn" name="submit" id="signupBtn">Sign Up</button>
             </div>
             <div>
                 <h3>Connect to view dashboard</h3>
@@ -114,14 +136,14 @@
                         <small>Password cannot be empty</small>
                     </div>
 
-                    <button type="submit" name="submit" id="signin">Sign In</button>
+                    <button type="submit" name="button" id="signin">Sign In</button>
                 </form>
                 <p class="footer-info">Challenge by <a href="https://thedeola.netlify.app/">Circle-171</a> Rockstars</p>
             </div>
         </div>
     </main>
     <!-- // ============= END DO NOT EDIT ============== // -->
-    <script src="./index.mjs" type="module"></script>
+    <script src="index.mjs" type="module"></script>
     <!-- // ============= END DO NOT EDIT ============== // -->
 </body>
 </html>

@@ -19,7 +19,7 @@
 }
 html, body {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     margin: auto;
 }
 
@@ -50,7 +50,7 @@ body {
 h1 {
     animation-duration: 3s;
     animation-name: slidein;
-    padding: 0 20px;
+    /* padding: 0 0px; */
     font-size: xx-large;
     margin: 50px auto;
 }
@@ -88,7 +88,7 @@ input {
     margin-bottom: 7px;
     width: 100%;
     border-radius: 5px;
-    border: .5px solid var(--GrayishBlue);
+    border: .5px solid white;
     font-weight: 500;
     font-family: var(--font-family);
 }
@@ -144,7 +144,7 @@ input[radio] {
     text-decoration: none;
 }
 .form input:focus {
-    border: 1px solid black;
+    border: 1px solid rgb(89, 0, 255);
     outline: none;
 }
 .terms {
@@ -166,48 +166,96 @@ small {
 .hide {
     display: none;
 }
+select {
+    padding: 10px;
+    width: 25%;
+    border-radius: 5px;
+    border: .5px solid var(--GrayishBlue);
+    font-weight: 500;
+    font-family: var(--font-family);
+}
+#phone {
+    width: 50%;
+}
+.phone-flex {
+    display: flex;
+    position: absolute;
+    margin-top: -40px;
+    right: 0px;
+    width: 20%;
+}
+.small-circle {
+    background-color: white;
+    border: .5px solid white;
+    border-radius: 50%;
+    padding: 2px;
+    height: 2px;
+    margin-top: 10px;
+}
+.first.small-circle {
+    background-color: transparent;
+}
+.thin-line {
+    border: .5px solid white;
+    width: 30%;
+    padding: 0;
+    height: 1px;
+    margin-top: 12px;
+}
+.big-circle {
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+    margin-left: 4%;
+}
 
 
 /*VALIDATION STYLING CHANGES*/
 
-.form-control{
+.form-control {
     margin-bottom: 10px;
     padding-bottom: 10px;
     position: relative;
 }
-small{
-    visibility: hidden;
-}
-.form-control >i {
+.form-control > i {
     position: absolute;
-    top: 22px;
-    right:10px;
+    top: 42px;
+    right: 10px;
     visibility: hidden;
 }
-.form-control small{
+.form-control > small {
     font-size: 12px;
     visibility: hidden;
     position: absolute;
     bottom:0; 
     left: 0;
-    margin-left:70px
+    margin-left: 5px;
 }
-.form-control.error input{
-    border-color: red;
+.form-control.error input {
+    border-color: var(--Red);
 }
-.form-control.error i.fa-exclamation-circle{ 
-    color:rgb(255, 60, 0);
-    visibility:visible
+.form-control.error i.fa-exclamation-circle { 
+    color:var(--Red);
+    /* visibility:visible; */
 }
-.form-control.error small{
-    visibility: visible;
+.form-control.error small {
+    /* visibility: visible; */
 }
-.form-control.success input{
+.form-control.success input {
     border-color: green;
 }
-.form-control.success i.fa-check-circle{
+.form-control.success i.fa-check-circle {
     color:green;
-    visibility:visible
+    /* visibility:visible; */
+}
+.phone > i {
+    right: 28%;
+    position: absolute;
+}
+.network_image {
+    background-image: url();
 }
 
 
@@ -218,7 +266,7 @@ small{
     }
     .container, .container2 {
         display: flex;
-        min-width: 1440px;
+        width: 1440px;
         margin: 0px auto;
         color: var(--DarkBlue);
         padding: 1% 5%;
@@ -244,13 +292,10 @@ small{
     .card-1 {
         text-align: left;
         margin-right: 15%;
-        /* margin-left: -10%; */
     }
     .card-2 {
         margin: 0 auto;
         width: 100%;
-        /* margin-right: -10%;
-        margin-left: 20%; */
     }
     .form {
         padding: 25px;
@@ -267,14 +312,6 @@ small{
     }
     #submit, #signin {
         width: 100%;
-    }
-    .form-control small{
-        font-size: 12px;
-        visibility: hidden;
-        position: absolute;
-        bottom:0; 
-        left: 0;
-        margin-left:180px
     }
     .hide {
         display: none;
