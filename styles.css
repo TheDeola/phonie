@@ -26,7 +26,7 @@ html, body {
 /* Mobile Responsiveness Starts Here */
 
 body {
-    background-image: url(./images/signin-banner.jpg);
+    /* background-image: url(./images/signin-banner.jpg); */
     background-position: top center;
     color: var(--DarkBlue);
     text-align: center;
@@ -174,6 +174,10 @@ select {
     font-weight: 500;
     font-family: var(--font-family);
 }
+select:focus {
+    border: 1px solid rgb(89, 0, 255);
+    outline: none;
+}
 #phone {
     width: 50%;
 }
@@ -210,7 +214,30 @@ select {
     width: 30px;
     margin-left: 4%;
 }
-
+.footer {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* background-color: white; */
+    /* color: teal; */
+    /* margin-top: 100px; */
+}
+.getintouch img[src] {
+    border: 1px solid transparent;
+    border-radius: 48%;
+    width: 40px;
+    height: 30px;
+    padding: 0px 5px;
+}
+.getintouch img[src]:hover {
+    background-color: var(--Red);
+}
+.getintouch span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+}
 
 /*VALIDATION STYLING CHANGES*/
 
@@ -238,17 +265,12 @@ select {
 }
 .form-control.error i.fa-exclamation-circle { 
     color:var(--Red);
-    /* visibility:visible; */
-}
-.form-control.error small {
-    /* visibility: visible; */
 }
 .form-control.success input {
     border-color: green;
 }
 .form-control.success i.fa-check-circle {
     color:green;
-    /* visibility:visible; */
 }
 .phone > i {
     right: 28%;
@@ -275,17 +297,22 @@ select {
         width: 150px;
         margin-top: -30px;
         margin-left: -20px;
-        margin-bottom: 10%;
+        /* margin-bottom: 10%; */
     }
     .nav {
         display: inline;
-        margin-bottom: 30px;
+        /* margin-bottom: 10px; */
     }
     h1 {
         font-size: 50px;
+        margin-top: 30%;
+        margin-bottom: 30%;
+    }
+    .container2 h1 {
+        margin-top: 10%;
+        margin-bottom: 10%;
     }
     h3 {
-        /* margin: 10% auto 0; */
         font-size: x-large;
         color: var(--DarkBlue);
     }
@@ -312,6 +339,10 @@ select {
     }
     #submit, #signin {
         width: 100%;
+    }
+    .footer {
+        display: flex;
+        justify-content:flex-start;
     }
     .hide {
         display: none;

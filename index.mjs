@@ -1,15 +1,27 @@
 const nameInput = document.getElementById('name');
+
 const username = document.getElementById('username');
+const username2 = document.getElementById('username2');
     
 const email = document.getElementById('email');
+const email2 = document.getElementById('email2');
+
 const phone = document.getElementById('phone');
+
 const password = document.getElementById('password');
+const password2 = document.getElementById('password2');
     
 // const button = document.getElementById('submit')
     
 const form = document.getElementById('form')
+const form2 = document.getElementById('form2')
     
 form.addEventListener('submit', (e) => {
+    e.preventDefault();
+        checkInput();
+})
+
+form2.addEventListener('submit', (e) => {
     e.preventDefault();
         checkInput();
 })
@@ -17,10 +29,12 @@ form.addEventListener('submit', (e) => {
 const checkInput = () =>{
     const nameValue = nameInput.value.trim();
     const usernameValue = username.value.trim();
+    const username2Value = username2.value.trim();
     const emailValue = email.value.trim();
+    const email2Value = email2.value.trim();
     const phoneValue = phone.value.trim();
     const passwordValue = password.value.trim();
-    
+    const password2Value = password2.value.trim();
     
     // INPUT VALIDATION
     //Name
@@ -38,6 +52,12 @@ const checkInput = () =>{
     } else {
         setSuccess(username);
     }
+
+    if (username2Value === '') {
+        setError(username2, 'Username cannot be empty')
+    } else {
+        setSuccess(username2);
+    }
     
     //Email
     
@@ -49,13 +69,21 @@ const checkInput = () =>{
         setSuccess(email);
     }
     
+    if (email2Value === '')  {
+        setError (email2, 'Email cannot be empty')
+    } else if (!isEmail(email2Value)) {
+        setError (email2, 'Looks like this is not an email')
+    } else {
+        setSuccess(email2);
+    }
+
     //Phone
     
-    if (phoneValue === '')  {
-        setError (phone, 'phone cannot be empty')
-    } else {
-        setSuccess(phone);
-    }
+    // if (phoneValue === '') {
+    //     setError(phone, 'Phone cannot be empty')
+    // } else {
+    //     setSuccess(phone);
+    // }
 
     //Password
     
@@ -63,6 +91,12 @@ const checkInput = () =>{
         setError(password, 'Password cannot be empty');
     } else {
         setSuccess(password);
+    }
+
+    if (password2Value === '') {
+        setError(password2, 'Password cannot be empty');
+    } else {
+        setSuccess(password2);
     }
 }
     
@@ -91,7 +125,7 @@ function isEmail(email) {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
 
-function isPhone(phone) {
+function Phone(phone) {
     return mtn, glo, airtel, etisalat.test(phone);
 }
 
