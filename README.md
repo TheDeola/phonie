@@ -35,7 +35,7 @@ After typing the phone number into the form field, the UI indicates that it is a
 * Support +XYZ country codes (e.g +234 for Nigeria) - Still detect the carrier even if the user prefixed the number with their +XYZ country code
 * Show auto-completion - Show suggestions as the user starts typing the phone number. E.g once they type 080, show them that 080*3* and 080*6* and other possible *matching* variants of the carrier
 
-### 02- Redactr - Scramble some words from a body of text content
+<!-- ### 02- Redactr - Scramble some words from a body of text content
 
 #### Scenario
 
@@ -65,4 +65,4 @@ When the user opens your dashboard app, they see HTML tables showing the followi
 
 #### Advanced features (OPTIONAL- build any, some or all of the following if you feel up to it) 
 
-* Make the tables sortable by (at least) the column holding the numbers. Indicate what columns are sortable (e.g with an icon or by adding the <> charectars in the column header e.t.c). When the user clicks on a sortable column header, sort the records in the table by that column (e.g switch the current sort order such that if the column was already sorted ASC, sort in DESC)
+* Make the tables sortable by (at least) the column holding the numbers. Indicate what columns are sortable (e.g with an icon or by adding the <> charectars in the column header e.t.c). When the user clicks on a sortable column header, sort the records in the table by that column (e.g switch the current sort order such that if the column was already sorted ASC, sort in DESC) -->

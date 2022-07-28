@@ -25,7 +25,7 @@ form2.addEventListener('submit', (e) => {
     e.preventDefault();
         checkInput();
 })
-    
+
 const checkInput = () =>{
     const nameValue = nameInput.value.trim();
     const usernameValue = username.value.trim();
@@ -81,8 +81,10 @@ const checkInput = () =>{
     
     // if (phoneValue === '') {
     //     setError(phone, 'Phone cannot be empty')
+    // } else if (!isValidPhone(phone)) {
+    //     setError(phone, 'Phone is incorrect')
     // } else {
-    //     setSuccess(phone);
+    //     setSuccess(phone)
     // }
 
     //Password
@@ -101,8 +103,9 @@ const checkInput = () =>{
 }
     
 const setError = (input, message) =>{
-         
+    // console.log(input)     
     const formControl = input.parentElement;
+    console.log(formControl) ;
     const small = formControl.querySelector('small');
     small.style.visibility = 'visible';
     small.innerText = message;
@@ -113,10 +116,11 @@ const setError = (input, message) =>{
 }
     
 const setSuccess =(input)=>{
+    console.log(input)  
     const formControl = input.parentElement;
     formControl.className='form-control success';
     const icon = formControl.querySelector('.fa-check-circle');
-    icon.classList.add('success')
+    icon.classList.add('success');
     icon.style.visibility = 'visible';
     icon.style.color = 'green';
 }
@@ -125,8 +129,8 @@ function isEmail(email) {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
 
-function Phone(phone) {
-    return mtn, glo, airtel, etisalat.test(phone);
+function isValidPhone(phone) {
+    return phone.length === 11;
 }
 
 let signinBtn = document.getElementById("signinBtn");
@@ -145,68 +149,68 @@ signinBtn.addEventListener("click", function(){
     signinForm.classList.remove("hide");
 })
 
-// const log = document.querySelector('network_image');
+// Phonie
 
-// phone.addEventListener("input", (e)=>{
-//     e.preventDefault()
+phone.addEventListener("input", (e)=>{
+    e.preventDefault()
 
-//     /** this would return all the object keys
-//      *  in the network map object 
-//      *  ie. allNetWorks would be equal to ["mtn", "glo", "airtel", "etisalat"]
-//      * */
-//     const allNetWorks = Object.keys(networkMap)
+    /** this would return all the object keys
+     *  in the network map object 
+     *  ie. allNetWorks would be equal to ["mtn", "glo", "airtel", "etisalat"]
+     * */
+    const allNetWorks = Object.keys(networkMap)
 
-//     /** once the user starts typing you can set the 
-//      * image src to a default image or set it to loading till
-//      * you find the right image
-//     */
-//     let logoResult = 'loading...'
+    /** once the user starts typing you can set the 
+     * image src to a default image or set it to loading till
+     * you find the right image
+    */
+    let logoResult = './images/circle-logo.png'
 
-//     /**
-//      * looping through all the networks to find the right one
-//      *
-//      */
-//     allNetWorks.forEach(network => {
+    /**
+     * looping through all the networks to find the right one
+     *
+     */
+    allNetWorks.forEach(network => {
 
-//         /**
-//          * get the first four characters in a string 
-//          * "08031234567" => "0803"
-//          */
-//         const phoneFirstFour = phone.value.substr(0, 4)
+        /**
+         * get the first four characters in a string 
+         * "08031234567" => "0803"
+         */
+        const phoneFirstFour = phone.value.substr(0, 4)
         
-//         /**
-//          * networkMap[network] = {logo: 'c', possiblePrefixes: ["0809", ...]}
-//          * networkMap[network].logo = c
-//          */
-//         if (networkMap[network].possiblePrefixes.includes(phoneFirstFour)){
-//             logoResult = networkMap[network].logo
-//         }
+        /**
+         * networkMap[network] = {logo: 'c', possiblePrefixes: ["0809", ...]}
+         * networkMap[network].logo = c
+         */
+        if (networkMap[network].possiblePrefixes.includes(phoneFirstFour)){
+            logoResult = networkMap[network].logo
+        }
 
-//     });
+    });
 
-//     //set the value on the page
-//     log.textContent = logoResult;
-// });
+    //set the value on the page
+    document.getElementById('network-image').src = `images/${logoResult}`;
+});
 
 
-// const networkMap = {
-//     mtn: {
-//         logo: 'a',
-//         possiblePrefixes: ['0703', '0706', '0803', '0806', '0810', '0813', '0814', '0816', '0903', '0906', '0913']
-//     },
-//     glo: {
-//         logo: 'b',
-//         possiblePrefixes: ['0705', '0805', '0807', '0811', '0815', '0905']
-//     },
-//     airtel: {
-//         logo: 'c',
-//         possiblePrefixes: ['0701', '0708', '0802', '0808', '0812', '0902', '0907', '0901', '0912']
-//     },
-//     etisalat: {
-//         logo: 'd',
-//         possiblePrefixes: ['0809', '0817', '0818', '0908', '0909']
-//     },
-// }
+const networkMap = {
+    mtn: {
+        logo: 'mtn.jpeg',
+        possiblePrefixes: ['0703', '0706', '0803', '0806', '0810', '0813', '0814', '0816', '0903', '0906', '0913']
+    },
+    glo: {
+        logo: 'glo.png',
+        possiblePrefixes: ['0705', '0805', '0807', '0811', '0815', '0905']
+    },
+    airtel: {
+        logo: 'airtel.png',
+        possiblePrefixes: ['0701', '0708', '0802', '0808', '0812', '0902', '0907', '0901', '0912']
+    },
+    etisalat: {
+        logo: '9mobile.png',
+        possiblePrefixes: ['0809', '0817', '0818', '0908', '0909']
+    },
+}
 
 // import startApp from './app.mjs';
 

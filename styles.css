@@ -11,7 +11,7 @@
 :root {
     --Red: hsl(323, 81%, 58%);
     --Green: hsl(170, 58%, 47%);
-    --Blue: hsl(248, 60%, 17%);
+    --Blue: hsl(247, 32%, 21%);
     --DarkBlue: hsl(249, 10%, 26%);
     --GrayishBlue: hsl(246, 25%, 77%);
     --font-family: 'Poppins', sans-serif;
@@ -82,16 +82,6 @@ h3 {
     display: flex;
     flex-direction: column;
 }
-input {
-    padding: 10px;
-    margin-top: 7px;
-    margin-bottom: 7px;
-    width: 100%;
-    border-radius: 5px;
-    border: .5px solid white;
-    font-weight: 500;
-    font-family: var(--font-family);
-}
 #signin-banner {
     width: 200px;
 }
@@ -161,7 +151,7 @@ small {
 }
 .footer-info {
     font-size: x-small;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 .hide {
     display: none;
@@ -213,14 +203,17 @@ select:focus {
     height: 30px;
     width: 30px;
     margin-left: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
 }
 .footer {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
-    /* background-color: white; */
-    /* color: teal; */
-    /* margin-top: 100px; */
+}
+.getintouch {
+    margin-top: 60px;
 }
 .getintouch img[src] {
     border: 1px solid transparent;
@@ -272,12 +265,26 @@ select:focus {
 .form-control.success i.fa-check-circle {
     color:green;
 }
-.phone > i {
+#form input {
+    border: .2px solid var(--DarkBlue);
+}
+input {
+    padding: 10px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: 500;
+    font-family: var(--font-family);
+}
+#phone > i {
     right: 28%;
     position: absolute;
 }
-.network_image {
-    background-image: url();
+#network-image {
+    width: 25px;
+    height: 20px;
+    border-radius: 50%;
 }
 
 
@@ -289,7 +296,7 @@ select:focus {
     .container, .container2 {
         display: flex;
         width: 1440px;
-        margin: 0px auto;
+        margin: 1% auto;
         color: var(--DarkBlue);
         padding: 1% 5%;
     }
@@ -343,6 +350,9 @@ select:focus {
     .footer {
         display: flex;
         justify-content:flex-start;
+    }
+    .footer-info {
+        margin-top: 70px;
     }
     .hide {
         display: none;
