@@ -111,6 +111,10 @@ h3 {
     padding: 15px;
     text-transform: uppercase;
 }
+#signin a {
+    text-decoration: none;
+    color: white;
+}
 #submit:hover, #signin:hover {
     cursor: pointer;
     background-color: var(--GrayishBlue);
@@ -197,12 +201,13 @@ select:focus {
     margin-top: 12px;
 }
 .big-circle {
-    border: 1px solid white;
+    border: .5px solid white;
     border-radius: 50%;
-    padding: 5px;
-    height: 30px;
-    width: 30px;
+    /* padding: 5px; */
+    height: 45px;
+    width: 45px;
     margin-left: 4%;
+    margin-top: -10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -239,6 +244,9 @@ select:focus {
     padding-bottom: 10px;
     position: relative;
 }
+.form input {
+    border: .2px solid var(--DarkBlue);
+}
 .form-control > i {
     position: absolute;
     top: 42px;
@@ -265,9 +273,6 @@ select:focus {
 .form-control.success i.fa-check-circle {
     color:green;
 }
-#form input {
-    border: .2px solid var(--DarkBlue);
-}
 input {
     padding: 10px;
     margin-top: 7px;
@@ -282,8 +287,8 @@ input {
     position: absolute;
 }
 #network-image {
-    width: 25px;
-    height: 20px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
 }
 

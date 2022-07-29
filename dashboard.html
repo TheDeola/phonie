@@ -10,20 +10,111 @@
 </head>
 <body>
     <div class="container">
-        <nav>
+        <div class="header">
             <img src="./images/circle-logo.png" class="logo" alt="circle logo">
-            <ul>
-                <li>Dashboard</li>
-                <li>Courses</li>
-                <li>Students</li>
-                <li>Tracks</li>
-                <li>Members</li>
-                <li>Redactr</li>
-            </ul>
-        </nav>
-        <main>
             <input type="search" name="search" value="" placeholder="Search by courses, tracks or instructors">
-        </main>
+            <h1>Hey, Rockstar!</h1>
+            <img src="./images/profile-avatar.png" alt="profile avatar" class="profile-avatar">
+        </div>
+        <div class="main">
+            <nav class="nav">
+                <ul>
+                    <li>
+                        <a href=""><img src="./images/dashboard.png" alt="dashboard icon" class="li-img">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href=""><img src="./images/tracks.png" alt="track icon" class="li-img">Tracks</a>
+                    </li>
+                    <li>
+                        <a href=""><img src="./images/projects.png" alt="project icon" class="li-img">Projects</a>
+                    </li>
+                    <li>
+                        <a href=""><img src="./images/courses.png" alt="course icon" class="li-img">Courses</a>
+                    </li>
+                    <li>
+                        <a href=""><img src="./images/students.png" alt="student icon" class="li-img">Students</a>
+                    </li>
+                    <li>
+                        <a href=""><img src="./images/events.png" alt="event icon" class="li-img">Events</a>
+                    </li>
+                    <li>
+                        <a href=""><img src="./images/helpcenter.png" alt="help center" class="li-img">Help Center</a>
+                    </li>
+                    <li>
+                        <a href=""><img src="./images/settings.png" alt="settings icon" class="li-img">Settings</a>
+                    </li>
+                    <li>
+                        <a href=""><img src="./images/redactr.png" alt="redactr" class="li-img">Redactr</a>
+                    </li>
+                    <li>
+                        <a href=""><img src="./images/logout.png" alt="log out" class="li-img">Log out</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="aside">
+                <h2>Welcome to <span class="welcome-span">SchoolStat:</span></h2>
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/courses.png" alt="stat card" class="stat-card">
+                        <h3>No of courses per instructor</h3>
+                        <p>X</p>
+                        <span><a href="#">View Details ></a></span>
+                    </div>
+                    <div class="card">
+                        <img src="./images/tracks.png" alt="stat card" class="stat-card">
+                        <h3>No of Students per track</h3>
+                        <p>X</p>
+                        <span><a href="#">View Details ></a></span>
+                    </div>
+                    <div class="card">
+                        <img src="./images/students.png" alt="stat card" class="stat-card">
+                        <h3>Students Gender Orientation</h3>
+                        <p>X</p>
+                        <span><a href="#">View Details ></a></span>
+                    </div>
+                    <div class="card">
+                        <img src="./images/redactr.png" alt="stat card" class="stat-card">
+                        <h3>Min-Max Age of Students</h3>
+                        <p>X</p>
+                        <span><a href="#">View Details ></a></span>
+                    </div>
+                </div>
+
+                <div class="table-track">
+                    <table>
+                        <h3>Track Info</h3>
+                        <thead>
+                            <tr>
+                                <th>TRACK NAME</th>
+                                <th>TRACK DESCRIPTION</th>
+                                <th>TRACK STATUS</th>
+                                <th>NO OF STUDENTS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="var-color">
+                                <td>Back-End Development</td>
+                                <td>In this program, you will learn how to program servers, client-side interfaces and design databases using various programming languages.</td>
+                                <td>Active</td>
+                                <td>3456</td>
+                            </tr>
+                            <tr>
+                                <td>Cloud Engineering</td>
+                                <td>In this program, you will understand how cloud resources are allocated and paid for and learn how to shorten the systems development life-cycle.</td>
+                                <td>Active</td>
+                                <td>3456</td>
+                            </tr>
+                            <tr class="var-color">
+                                <td>Front-End Development</td>
+                                <td>In this program, you will learn how to create functional websites by implementing web designs through the use of various programming languages.</td>
+                                <td>Active</td>
+                                <td>3456</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
     
     <!-- // ============= END DO NOT EDIT ============== // -->

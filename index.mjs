@@ -154,34 +154,31 @@ signinBtn.addEventListener("click", function(){
 phone.addEventListener("input", (e)=>{
     e.preventDefault()
 
-    /** this would return all the object keys
-     *  in the network map object 
-     *  ie. allNetWorks would be equal to ["mtn", "glo", "airtel", "etisalat"]
-     * */
+    /** this would return all the object keys in the network map object 
+    ie. allNetWorks would be equal to ["mtn", "glo", "airtel", "etisalat"]
+    * */
     const allNetWorks = Object.keys(networkMap)
 
-    /** once the user starts typing you can set the 
-     * image src to a default image or set it to loading till
-     * you find the right image
+    /** once the user starts typing you can set the image src to a default image or set it to loading till
+    you find the right image
     */
-    let logoResult = './images/circle-logo.png'
+    let logoResult = './images/loading.gif'
 
     /**
-     * looping through all the networks to find the right one
-     *
-     */
+    looping through all the networks to find the right one
+    */
+
     allNetWorks.forEach(network => {
 
         /**
-         * get the first four characters in a string 
-         * "08031234567" => "0803"
-         */
+        get the first four characters in a string "08031234567" => "0803"
+        */
         const phoneFirstFour = phone.value.substr(0, 4)
         
         /**
-         * networkMap[network] = {logo: 'c', possiblePrefixes: ["0809", ...]}
-         * networkMap[network].logo = c
-         */
+        networkMap[network] = {logo: 'c', possiblePrefixes: ["0809", ...]}
+        networkMap[network].logo = c
+        */
         if (networkMap[network].possiblePrefixes.includes(phoneFirstFour)){
             logoResult = networkMap[network].logo
         }
